@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rewards Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rewards Dashboard (Vanilla JS)</h1>
+      <div id="appError" role="alert"></div>
+    </header>
+
+    <div class="container">
+      <aside>
+        <div class="filters">
+          <div>
+            <label for="yearFilter">Year</label>
+            <select id="yearFilter" aria-label="Year filter"></select>
+          </div>
+          <div>
+            <label for="monthFilter">Month</label>
+            <select id="monthFilter" aria-label="Month filter"></select>
+          </div>
+        </div>
+
+        <table class="table" aria-label="Customers">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="customersBody"></tbody>
+        </table>
+        <div class="pagination">
+          <button id="prevPage">Prev</button>
+          <div id="paginationInfo" class="muted small"></div>
+          <button id="nextPage">Next</button>
+        </div>
+      </aside>
+
+      <main>
+        <section id="summary"><h3>Select a customer</h3></section>
+        <h4 style="margin-top: 8px">Transactions</h4>
+        <ul id="txList" class="list"></ul>
+      </main>
+    </div>
+
+    <footer>
+      Showing default last 3 months. Select month tiles or use filters.
+    </footer>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

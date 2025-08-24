@@ -1,0 +1,20 @@
+{
+  "name": "rewards-dashboard-vanilla-js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "transform": {},
+    "verbose": true,
+    "testEnvironment": "node"
+  }
+}
