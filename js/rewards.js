@@ -28,29 +28,6 @@ export function calcPoints(amount) {
 }
 
 /**
- * Group transactions by customerId, then by year-month.
- * @param {Array<{customerId:string, transactionId:string, amount:number, date:string}>} txs
- */
-// export function summarizeByCustomerAndMonth(txs) {
-//   const summary = {};
-//   for (const t of txs) {
-//     const cid = t.customerId;
-//     const dt = new Date(t.date);
-//     if (isNaN(dt)) continue;
-//     const ym = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(
-//       2,
-//       "0"
-//     )}`;
-//     const pts = calcPoints(t.amount);
-//     if (!summary[cid]) summary[cid] = { months: {}, total: 0 };
-//     if (!summary[cid].months[ym]) summary[cid].months[ym] = 0;
-//     summary[cid].months[ym] += pts;
-//     summary[cid].total += pts;
-//   }
-//   return summary;
-// }
-
-/**
  * Filter transactions by year & (optional) month
  * @param {Array} txs
  * @param {number} year
